@@ -83,6 +83,16 @@
             text-align: left;
             line-height: 1.6; /* 设置行间距，1.6为推荐值 */
         }
+        .ack1 {
+            font-size: 20px;
+            max-width: 800px;
+            font-weight: bold;
+            color: #34568B;
+            margin: 0 auto; /* 使内容居中 */
+            text-align: left;
+            line-height: 1.6; /* 设置行间距，1.6为推荐值 */
+        }
+
         .abstract {
             font-size: 16px;
             max-width: 600px;
@@ -159,6 +169,13 @@ Meanwhile, IKD assesses the importance of queries based on their matching degree
 Extensive experiments in Class Incremental Panoptic and Semantic Segmentation settings have demonstrated the superior performance of CoMBO.
 </p>
 <br>
+    <h1>Main Contributions</h1>
+    <p class="ack1">We propose a Half-Learning Half-Distillation mechanism that applies soft distillation for old classes and binary-based optimization for new classes to effectively balance retention and acquisition.</p>
+    <br>
+    <p class="ack1">An extra Query Conflict Reduction module is proposed to refine queries for new classes while preserving unrefined features, which enables Importance-based Knowledge Distillation for remembering the key features.</p>
+    <br>
+    <p class="ack1">Through extensive quantitative and qualitative evaluations on the ADE20K dataset, we demonstrate the state-of-the-art performance of our model in both Class Incremental Semantic and Panoptic Segmentation tasks.</p>
+    <br>
     <h1>Experimental Results</h1>
     <h3>Class Incremental Panoptic Segmentation</h3>
     <img src="https://guangyu-ryan.github.io/guangyugao-master.com/template/pc/skin/images/CIPS.png" alt="CIPS">
@@ -185,13 +202,12 @@ IES\R3\223050) and an Amazon Research Award.</p>
     <br>
     <h2>BibTeX</h2>
 <pre>
-@inproceedings{zhang2024background,
-  title={Background adaptation with residual modeling for exemplar-free class-incremental semantic segmentation},
-  author={Zhang, Anqi and Gao, Guangyu},
-  booktitle={European Conference on Computer Vision},
-  pages={166--183},
-  year={2024},
-  organization={Springer}
+@inproceedings{ru2022learning,
+  title={Learning affinity from attention: End-to-end weakly-supervised semantic segmentation with transformers},
+  author={Fang, Kai and Zhang, Anqi and Gao, Guangyu and Jiao, Jianbo and Liu, Chi Harold and Wei, Yunchao},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={xxx-xxx},
+  year={2025}
 }
 </pre>
 </body>
