@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: -390px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: lightseagreen; /* 标题颜色 */
+            margin-left: -740px;
+        }
+
+        .authors {
+            font-size: 18px;
+            color: #34568B;
+        }
+
+        .affiliations {
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .conference {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .person-link {
+            color: #6495ED;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #333;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+        }
+        .ack {
+            font-size: 16px;
+            max-width: 850px;
+            margin: 0 auto; /* 使内容居中 */
+            text-align: left;
+            line-height: 1.6; /* 设置行间距，1.6为推荐值 */
+        }
+        .ack1 {
+            font-size: 20px;
+            max-width: 800px;
+            font-weight: bold;
+            color: #34568B;
+            margin: 0 auto; /* 使内容居中 */
+            text-align: left;
+            line-height: 1.6; /* 设置行间距，1.6为推荐值 */
+        }
+
+        .abstract {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto; /* 使内容居中 */
+            text-align: left;
+            line-height: 1.6; /* 设置行间距，1.6为推荐值 */
+        }
+        pre {
+            background-color: #f4f4f4; /* 背景颜色 */
+            font-size: 16px;
+            border: 1px solid #ccc; /* 边框样式 */
+            padding: 10px; /* 内边距 */
+            text-align: left;
+            margin: 0 auto; /* 使内容居中 */
+            overflow: auto; /* 允许滚动 */
+            line-height: 1.6; /* 设置行间距，1.6为推荐值 */
+            max-width: 800px;
+        }
+         img {
+            height: auto; /* 高度自动调整以保持纵横比 */
+            display: block; /* 将图片设置为块级元素 */
+             margin: 0 auto; /* 使内容居中 */
+             max-width: 800px;
+        }
+        .img1 {
+            height: auto; /* 高度自动调整以保持纵横比 */
+            display: block; /* 将图片设置为块级元素 */
+             margin: 0 auto; /* 使内容居中 */
+             max-width: 1000px;
+        }
+        .img2 {
+            height: auto; /* 高度自动调整以保持纵横比 */
+            display: block; /* 将图片设置为块级元素 */
+             margin: 0 auto; /* 使内容居中 */
+             max-width: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CoMBO: Conflict Mitigation via Branched Optimization for Class Incremental Segmentation</h1>
+
+    <p class="authors">
+        <a href="#" class="person-link">Kai Fang</a><sup>1</sup>,
+        <a href="#" class="person-link">Anqi Zhang</a><sup>1</sup>,
+        <a href="http://guangyugao-master.cn/" class="person-link">Guangyu Gao</a><sup>1</sup>,
+        <a href="https://jianbojiao.com/" class="person-link">Jianbo Jiao</a><sup>2</sup>,
+        <a href="https://cs.bit.edu.cn/szdw/jsml/bssds/e99eddb6f93f4c1f9388bea0b4f9979e.htm" class="person-link">Chi Harold Liu</a><sup>1</sup>,
+        <a href="https://weiyc.github.io/" class="person-link">Yunchao Wei</a><sup>3</sup>,
+    </p>
+
+    <p class="affiliations">
+        <sup>1</sup>Beijing Institute of Technology,
+        <sup>2</sup>University of Birmingham,
+        <sup>3</sup>Beijing Jiaotong University,
+    </p>
+
+    <p class="conference">in CVPR 2025</p>
+
+    <div class="buttons">
+        <a href="https://arxiv.org/abs/2407.09838" class="button">📄 Paper</a>
+        <a href="https://github.com/KaiXu47/CoMBO" class="button">💻 Code</a>
+    </div>
+    <h1>Abstract</h1>
+    <p class="abstract">Effective Class Incremental Segmentation (CIS) requires simultaneously mitigating catastrophic forgetting and ensuring sufficient plasticity to integrate new classes.
+The inherent conflict above often leads to a back-and-forth, which turns the objective into finding the balance between the performance of previous (old) and incremental (new) classes.
+To address this conflict, we introduce a novel approach, Conflict Mitigation via Branched Optimization (CoMBO).
+Within this approach, we present the Query Conflict Reduction module, designed to explicitly refine queries for new classes through lightweight, class-specific adapters.
+This module provides an additional branch for acquisition of new classes while preserves the original queries for distillation.
+Moreover, we develop two strategies to further mitigate the conflict following the branched structure,
+i.e., the Half-Learning Half-Distillation (HDHL) over classification probabilities, and the Importance-Based Knowledge Distillation (IKD) over query features.
+HDHL selectively engages in learning for classification probabilities of queries that match the ground truth of new classes, while aligning unmatched ones to the corresponding old probabilities, thus ensuring retention of old knowledge while absorbing new classes via learning negative samples.
+Meanwhile, IKD assesses the importance of queries based on their matching degree to old classes, prioritizing the distillation of important features and allowing less critical features to evolve.
+Extensive experiments in Class Incremental Panoptic and Semantic Segmentation settings have demonstrated the superior performance of CoMBO.
+</p>
+<br>
+    <h1>Main Contributions</h1>
+    <p class="ack1">We propose a Half-Learning Half-Distillation mechanism that applies soft distillation for old classes and binary-based optimization for new classes to effectively balance retention and acquisition.</p>
+    <br>
+    <p class="ack1">An extra Query Conflict Reduction module is proposed to refine queries for new classes while preserving unrefined features, which enables Importance-based Knowledge Distillation for remembering the key features.</p>
+    <br>
+    <p class="ack1">Through extensive quantitative and qualitative evaluations on the ADE20K dataset, we demonstrate the state-of-the-art performance of our model in both Class Incremental Semantic and Panoptic Segmentation tasks.</p>
+    <br>
+    <h1>Experimental Results</h1>
+    <h3>Class Incremental Panoptic Segmentation</h3>
+    <img src="https://guangyu-ryan.github.io/guangyugao-master.com/template/pc/skin/images/CIPS.png" alt="CIPS">
+    <h3>Class Incremental Semantic Segmentation</h3>
+    <img src="https://guangyu-ryan.github.io/guangyugao-master.com/template/pc/skin/images/CISS.png" alt="CISS">
+    <p class="ack">We evaluated our approach alongside current exemplar-free approaches on the ADE20K dataset within the framework of Class Incremental Panoptic Segmentation.
+The performance of our CoMBO surpasses other methods in most of the scenarios, particularly in the challenging 100-10 sub-task, we achieve 35.6% PQ with at least 3.4% of advantage on incremental classes compared to the previous state-of-the-art methods, demonstrating the effectiveness from reducing the conflicts.
+<br>
+        We further extended our evaluation to the semantic segmentation benchmark, comparing our approach against previous methods on the ADE20K dataset.
+Our approach consistently outperforms previous methods in all tested scenarios. </p>
+    <br>
+    <h1>Qualitative Results</h1>
+    <img class="img1" src="https://guangyu-ryan.github.io/guangyugao-master.com/template/pc/skin/images/qualitative.png" alt="CIPS">
+    <br>
+    <img class="img2" src="https://guangyu-ryan.github.io/guangyugao-master.com/template/pc/skin/images/sem_qual.png" alt="CIPS">
+    <br>
+    <h1>Acknowledgments</h1>
+    <p class="ack">This work was supported by the National Key R&D Program of China (Grant 2022YFC3310200), the National
+Natural Science Foundation of China (Grant 62472033,
+92470203), the Beijing Natural Science Foundation (Grant
+L242022), the Royal Society grants (SIF\R1\231009,
+IES\R3\223050) and an Amazon Research Award.</p>
+    <br>
+    <br>
+    <h2>BibTeX</h2>
+<pre>
+@inproceedings{ru2022learning,
+  title={Learning affinity from attention: End-to-end weakly-supervised semantic segmentation with transformers},
+  author={Fang, Kai and Zhang, Anqi and Gao, Guangyu and Jiao, Jianbo and Liu, Chi Harold and Wei, Yunchao},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={xxx-xxx},
+  year={2025}
+}
+</pre>
+</body>
+</html>
